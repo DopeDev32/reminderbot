@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 load_dotenv()
@@ -30,8 +31,9 @@ def webhook():
     return jsonify(success=True)
 
 import requests
-
+load_dotenv()
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+load_dotenv()
 PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
 
 def send_message(to, text):
