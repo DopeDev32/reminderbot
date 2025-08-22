@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
-
+import os
 app = Flask(__name__)
 load_dotenv()
 VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
